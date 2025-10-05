@@ -24,7 +24,7 @@
             --card: #ffffff;
             --card-foreground: #030213;
             --destructive: #d4183d;
-            --destructive-foreground: #ffffff;
+            --destructive-foregrounFd: #ffffff;
             --radius: 0.625rem;
         }
 
@@ -71,7 +71,7 @@
         }
 
         .nav-links.desktop {
-            display: flex;
+            display: none;
         }
 
         .nav-button {
@@ -747,10 +747,10 @@
         }
 
         document.addEventListener('click', function(e) {
-            const nav = document.querySelector('.nav');
+            const header = document.querySelector('.header');
             const mobileMenu = document.getElementById('mobile-menu');
-            
-            if (!nav.contains(e.target)) {
+
+            if (!header.contains(e.target)) {
                 mobileMenu.classList.remove('active');
             }
         });
