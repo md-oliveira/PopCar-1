@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Pop Car</title>
     <style>
         * {
@@ -51,6 +53,11 @@
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border);
             padding: 1rem 0;
+            background: linear-gradient(to bottom,
+                    /* Começa com o azul escuro com 70% de opacidade */
+                    rgba(11, 19, 43, 0.7),
+                    /* Termina com o azul escuro totalmente transparente */
+                    rgba(11, 19, 43, 0.0));
         }
 
         .nav {
@@ -114,6 +121,7 @@
             .nav-links.desktop {
                 display: flex;
             }
+
             .mobile-menu-toggle {
                 display: none;
             }
@@ -124,9 +132,30 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(3, 2, 19, 0.05) 0%, rgba(241, 245, 249, 0.1) 100%);
             text-align: center;
             padding: 2rem 0;
+
+            background-color: #0b132b;
+
+
+            background-image:
+
+                linear-gradient(to top,
+
+                    rgba(11, 19, 43, 0.7),
+
+                    rgba(11, 19, 43, 0.4)),
+
+                url('fotoOficina.jpeg');
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
         .hero-content {
@@ -159,7 +188,7 @@
 
         .hero-description {
             font-size: 1.125rem;
-            color: var(--muted-foreground);
+            color: white;
             max-width: 32rem;
             margin: 0 auto 2rem;
         }
@@ -203,9 +232,9 @@
             background-color: var(--muted);
         }
 
-.stat-item {
-    text-align: center;
-}
+        .stat-item {
+            text-align: center;
+        }
 
         .stat-item {
             text-align: center;
@@ -234,6 +263,7 @@
             .hero-title {
                 font-size: 3.75rem;
             }
+
             .stats-grid {
                 grid-template-columns: repeat(4, 1fr);
             }
@@ -343,6 +373,7 @@
             .projects-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+
             .section-title {
                 font-size: 2.5rem;
             }
@@ -443,6 +474,17 @@
             width: 2.5rem;
             height: 2.5rem;
             background-color: rgba(3, 2, 19, 0.1);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .zapzap {
+            background-color: #25D366;
+            width: 2.5rem;
+            height: 2.5rem;
             border-radius: var(--radius);
             display: flex;
             align-items: center;
@@ -560,8 +602,162 @@
         .hidden {
             display: none;
         }
+
+
+            
+        .contact {
+            padding: 60px 0;
+            background-color: #f8f9fa; /* Fundo levemente cinza para a seção */
+        }
+
+        /* Título e Descrição da Seção */
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #0b132b; /* Azul petróleo escuro */
+            margin-bottom: 15px;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: #495057;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Layout dos Cards (Contact Grid) */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo, 3 colunas */
+            gap: 30px; /* Espaçamento entre os cards */
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Estilo Base dos Cards de Informação */
+        .info-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra suave */
+            display: flex;
+            flex-direction: column;
+            height: 100%; /* Garante que todos os cards tenham a mesma altura */
+        }
+
+        .info-card .form-title {
+            font-size: 1.6rem;
+            color: #0b132b;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #FFC300; /* Linha amarela da marca */
+            padding-bottom: 10px;
+            display: inline-block; /* Para a borda pegar só o texto */
+        }
+
+        /* Itens de Contato (ícone + texto) */
+        .contact-item {
+            display: flex;
+            align-items: flex-start; /* Alinha o texto do topo */
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .contact-item h4 {
+            font-size: 1.2rem;
+            color: #0b132b;
+            margin-bottom: 5px;
+        }
+
+        .contact-item p {
+            color: #495057;
+            line-height: 1.5;
+        }
+
+        /* Estilo dos Ícones */
+        .contact-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px; /* Tamanho do círculo do ícone */
+            height: 45px;
+            border-radius: 50%; /* Formato de círculo */
+            font-size: 24px; /* Tamanho do ícone */
+            color: white; /* Cor do ícone */
+            flex-shrink: 0; /* Impede que o ícone diminua */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para destacar o ícone */
+        }
+
+        /* Cores específicas para os ícones */
+        .whatsapp-color {
+            background-color: #25D366; /* Verde WhatsApp */
+        }
+
+        .map-color {
+            background-color: #dc3545; /* Vermelho vibrante do Google Maps */
+        }
+
+        /* Estilo para links (WhatsApp e Localização) */
+        .whatsapp-link, .map-link {
+            color: #FFC300; /* Cor da marca para os links */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .whatsapp-link:hover, .map-link:hover {
+            color: #e6b200; /* Escurece no hover */
+            text-decoration: underline;
+        }
+
+        /* Estilo do Mapa Embutido */
+        .map-embed {
+            margin-top: 25px;
+            border-radius: 8px;
+            overflow: hidden; /* Garante que o iframe respeite o border-radius */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-embed iframe {
+            width: 100%;
+            height: 250px; /* Altura do mapa */
+            border: none; /* Remove a borda padrão do iframe */
+            display: block; /* Remove espaçamento extra que alguns iframes podem ter */
+        }
+
+        /* Estilos para as tags de serviço */
+        .services-tags {
+            display: flex;
+            flex-wrap: wrap; /* Quebra as tags em múltiplas linhas */
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tech-tag {
+            background-color: #e9ecef; /* Fundo cinza claro */
+            color: #495057;
+            padding: 8px 15px;
+            border-radius: 20px; /* Bordas arredondadas */
+            font-size: 0.9rem;
+            white-space: nowrap; /* Impede que as tags quebrem no meio */
+        }
+
+        /* Ajustes Responsivos */
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr; /* Uma coluna em telas menores */
+            }
+            .info-card {
+                margin-bottom: 20px; /* Espaçamento entre cards em telas menores */
+            }
+        }
+
     </style>
 </head>
+
 <body>
     <header class="header">
         <div class="container">
@@ -585,105 +781,128 @@
     </header>
 
     <main>
-        <section id="apresentacao" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title">
-                    POP CAR
-                    </h1>
-                    
-                    <p class="hero-description">Aqui na Região de São José do Rio Preto, somos a solução completa para o seu veículo! Trabalhamos com funilaria e pintura de alto nível para um acabamento perfeito, serviços de estética automotiva que devolvem o brilho. Cuidamos do seu carro nacional ou importado com excelência. 
-                    </p>
-                    
-                    <div class="hero-buttons">
-                        <button class="button button-primary" onclick="scrollToSection('Serviços')">
-                            Ver Serviços
-                        </button>
-                        <button class="button button-outline" onclick="scrollToSection('contato')">
-                            Entre em Contato
-                        </button>
+        <div id="matheus">
+            <section id="apresentacao" class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            POP CAR
+                        </h1>
+
+                        <p class="hero-description">Aqui na Região de São José do Rio Preto, somos a solução completa
+                            para o seu veículo! Trabalhamos com funilaria e pintura de alto nível para um acabamento
+                            perfeito, serviços de estética automotiva que devolvem o brilho. Cuidamos do seu carro
+                            nacional ou importado com excelência.
+                        </p>
+
+                        <div class="hero-buttons">
+                            <button class="button button-primary" onclick="scrollToSection('Serviços')">
+                                Ver Serviços
+                            </button>
+                            <button class="button button-outline" style="color: white;"
+                                onclick="scrollToSection('contato')">
+                                Entre em Contato
+                            </button>
+                        </div>
                     </div>
-                    
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">Qualidade</div>
                 </div>
-            </div>
+        </div>
         </section>
+        </div>
 
-        <section id="Serviços" class="Serviços">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Serviços</h2>
-                    <p class="section-description">
-                        Especialidades e serviços oferecidos:
-                </div>
-                
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <img src="martelinho.jpg"
-                             alt="martelinho de Ouro" class="project-image">
-                        <div class="project-content">
-                            <h3 class="project-title">martelinho de Ouro</h3>
-                            <p class="project-description">Martelinho de Ouro é a técnica ideal para reparar pequenos amassados e danos na lataria do seu veículo sem a necessidade de repintura, preservando o acabamento original.</p>
-                        </div>
+        <div id="henzo">
+            <section id="Serviços" class="Serviços">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title">Serviços</h2>
+                        <p class="section-description">
+                            Especialidades e serviços oferecidos:
+                        </p>
                     </div>
 
-                    <div class="project-card">
-                        <img src="PinturaAutomotiva.png"
-                             alt="App Mobile de Produtividade" class="project-image">
-                        <div class="project-content">
-                            <h3 class="project-title">Pintura automotiva</h3>
-                            <p class="project-description">Pintura automotiva de alta qualidade com técnicas avançadas para restaurar e proteger a pintura do seu veículo, garantindo um acabamento impecável e duradouro.</p>
-                            
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <img src="martelinho.jpg" alt="martelinho de Ouro" class="project-image">
+                            <div class="project-content">
+                                <h3 class="project-title">martelinho de Ouro</h3>
+                                <p class="project-description">Martelinho de Ouro é a técnica ideal para reparar
+                                    pequenos amassados e danos na lataria do seu veículo sem a necessidade de repintura,
+                                    preservando o acabamento original.</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="project-card">
-                        <img src="polimento.jpg"
-                             alt="Dashboard Analytics" class="project-image">
-                        <div class="project-content">
-                            <h3 class="project-title">Polimento</h3>
-                            <div class="tech-tags">Polimento de alta qualidade para restaurar o brilho e proteger a pintura do seu veículo.</div>
+                        <div class="project-card">
+                            <img src="PinturaAutomotiva.png" alt="App Mobile de Produtividade" class="project-image">
+                            <div class="project-content">
+                                <h3 class="project-title">Pintura automotiva</h3>
+                                <p class="project-description">Pintura automotiva de alta qualidade com técnicas
+                                    avançadas para restaurar e proteger a pintura do seu veículo, garantindo um
+                                    acabamento impecável e duradouro.</p>
+
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <img src="polimento.jpg" alt="Dashboard Analytics" class="project-image">
+                            <div class="project-content">
+                                <h3 class="project-title">Polimento</h3>
+                                <div class="tech-tags">Polimento de alta qualidade para restaurar o brilho e proteger a
+                                    pintura do seu veículo.</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-            </div>
+        </div>
         </section>
+        </div>
 
-        <section id="contato" class="contact">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Entre em Contato</h2>
-                    <p class="section-description">
-                        Pronto para transformar seu carro? Vamos conversar sobre
-                        como posso ajudar.
-                    </p>
-                </div>
-                    <div class="contact-info">
+        <div id="iago">
+            <section id="contato" class="contact">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title">Entre em Contato</h2>
+                        <p class="section-description">
+                            Pronto para transformar seu carro? Vamos conversar sobre como podemos te ajudar.
+                        </p>
+                    </div>
+
+                    <div class="contact-grid">
                         <div class="info-card">
                             <h3 class="form-title">Informações de Contato</h3>
+
                             <div class="contact-item">
-                                <div class="contact-icon">📱</div>
+                                <div class="contact-icon whatsapp-color"> <i class="bi bi-whatsapp"></i> </div>
                                 <div class="contact-details">
-                                    <h4>Telefone</h4>
-                                    <p>+55 (17) 3364-5702</p>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-item">
-                                <div class="contact-icon">📍</div>
-                                <div class="contact-details">
-                                    <h4>Localização</h4>
-                                    <p>Rua Pedro Amaral, 1055 - Parque Industrial, São José do Rio Preto - SP</p>
+                                    <h4>WhatsApp</h4>
+                                    <a href="https://wa.link/p2n9r8" target="_blank" class="whatsapp-link">
+                                        Clique para enviar mensagem
+                                    </a>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="info-card">
+                        <div class="info-card map-card">
+                            <h3 class="form-title">Nossa Localização</h3>
+                            <div class="contact-item location-item">
+                                <div class="contact-icon map-color"> <i class="bi bi-geo-alt-fill"></i> </div>
+                                <div class="contact-details">
+                                    <p>Rua Pedro Amaral, 1055 - Parque Industrial, São José do Rio Preto - SP</p>
+                                    <a href="http://maps.google.com/?q=Rua Pedro Amaral, 1055 - Parque Industrial, São José do Rio Preto - SP"
+                                        target="_blank" class="map-link">
+                                        Ver no Google Maps
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="map-embed">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.185672462615!2d-49.3879222!3d-20.8037626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bb2e66f363c467%3A0x867c0401837e2652!2sRua%20Pedro%20Amaral%2C%201055%20-%20Parque%20Industrial%2C%20S%C3%A3o%20Jos%C3%A9%20do%20Rio%20Preto%20-%20SP%2C%2015030-220!5e0!3m2!1spt-BR!2sbr!4v1701100000000!5m2!1spt-BR!2sbr"
+                                    width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+
+                        <div class="info-card services-card">
                             <h3 class="form-title">Vamos trabalhar juntos!</h3>
                             <p class="form-description">
                                 Especialidades e serviços oferecidos:
@@ -697,10 +916,11 @@
                                 <span class="tech-tag">Espelhamento</span>
                             </div>
                         </div>
+
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
     <footer class="footer">
@@ -712,7 +932,7 @@
                         Trabalhamos com funilaria e pintura de alto nível.
                     </p>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4>Links Rápidos</h4>
                     <ul class="footer-links">
@@ -721,6 +941,7 @@
                         <li><button onclick="scrollToSection('contato')">Contato</button></li>
                     </ul>
                 </div>
+            </div>
 
             <div class="footer-bottom">
                 <p>© 2025 Pop Car. Todos os direitos reservados.</p>
@@ -746,7 +967,7 @@
             mobileMenu.classList.toggle('active');
         }
 
-        document.addEventListener('click', function(e) {
+        document.addEventListener('click', function (e) {
             const header = document.querySelector('.header');
             const mobileMenu = document.getElementById('mobile-menu');
 
@@ -755,30 +976,38 @@
             }
         });
 
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const sections = ['apresentacao', 'Serviços', 'contato'];
             const navButtons = document.querySelectorAll('.nav-button');
-            
+
             let current = '';
             sections.forEach(sectionId => {
                 const section = document.getElementById(sectionId);
+                // A função original procura pelo ID da SECTION. 
+                // Se você quiser que o scroll destaque as novas divs, 
+                // precisaria alterar a função `scrollToSection` e 
+                // os botões de navegação para usar os IDs 'matheus', 'henzo', 'iago'.
+                // Mantive o comportamento original de navegação pelas sections.
                 if (section) {
                     const sectionTop = section.offsetTop - 100;
                     const sectionHeight = section.offsetHeight;
-                    
+
                     if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
                         current = sectionId;
                     }
                 }
             });
-            
+
             navButtons.forEach(button => {
                 button.style.backgroundColor = '';
-                if (button.textContent.toLowerCase() === current) {
+                // A comparação de texto pode não funcionar bem. Vou manter o estilo original.
+                // Ajustei a lógica para usar a string do ID.
+                if (button.textContent.toLowerCase().includes(current.toLowerCase().replace('apresentacao', 'apresentação'))) {
                     button.style.backgroundColor = 'var(--muted)';
                 }
             });
         });
     </script>
 </body>
+
 </html>
